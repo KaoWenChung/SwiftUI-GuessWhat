@@ -18,6 +18,7 @@
 		210D47742B9A545E00A7E314 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47732B9A545E00A7E314 /* UserInputView.swift */; };
 		210D47762B9A573100A7E314 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47752B9A573100A7E314 /* ResultView.swift */; };
 		210D47792B9A5B8200A7E314 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47782B9A5B8200A7E314 /* AnyTransition.swift */; };
+		210D477C2B9A5E0D00A7E314 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D477B2B9A5E0D00A7E314 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		210D47732B9A545E00A7E314 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		210D47752B9A573100A7E314 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		210D47782B9A5B8200A7E314 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
+		210D477B2B9A5E0D00A7E314 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				210D47452B9A4B5200A7E314 /* HotSeatApp.swift */,
+				210D477A2B9A5E0600A7E314 /* Model */,
 				210D47772B9A5B7100A7E314 /* Extension */,
 				210D47702B9A50B200A7E314 /* Views */,
 				210D47492B9A4B5400A7E314 /* Assets.xcassets */,
@@ -142,9 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				210D47472B9A4B5200A7E314 /* ContentView.swift */,
-				210D47752B9A573100A7E314 /* ResultView.swift */,
 				210D47712B9A50E200A7E314 /* GameSettingView.swift */,
 				210D47732B9A545E00A7E314 /* UserInputView.swift */,
+				210D47752B9A573100A7E314 /* ResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +158,14 @@
 				210D47782B9A5B8200A7E314 /* AnyTransition.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		210D477A2B9A5E0600A7E314 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				210D477B2B9A5E0D00A7E314 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				210D47462B9A4B5200A7E314 /* HotSeatApp.swift in Sources */,
 				210D47722B9A50E200A7E314 /* GameSettingView.swift in Sources */,
 				210D47792B9A5B8200A7E314 /* AnyTransition.swift in Sources */,
+				210D477C2B9A5E0D00A7E314 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

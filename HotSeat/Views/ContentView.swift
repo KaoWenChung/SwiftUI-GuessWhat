@@ -15,18 +15,19 @@ enum GameState {
 
 struct ContentView: View {
     @State private var state: GameState = .setting
+    @State private var users: [User] = []
 
     var body: some View {
         VStack {
             switch state {
             case .setting:
-                GameSettingView(state: $state)
+                GameSettingView(state: $state, users: $users)
                     .transition(.slideAndFade)
             case .typing:
-                UserInputView(state: $state)
+                UserInputView(state: $state, users: $users)
                     .transition(.slideAndFade)
             case .result:
-                ResultView(state: $state)
+                ResultView(state: $state, users: $users)
                     .transition(.slideAndFade)
             }
         }

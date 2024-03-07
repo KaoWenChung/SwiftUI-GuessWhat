@@ -9,20 +9,30 @@ import SwiftUI
 
 struct UserInputView: View {
     @Binding var state: GameState
-    @State private var playerLabel = "Player 1"
+    @Binding var users: [User]
+    private var playerLabel: String {
+        return users[currentUserIndex].id
+    }
     @State private var textContent: String = ""
+    @State private var currentUserIndex: Int = 0
 
     var body: some View {
         VStack {
             Text(playerLabel)
             Text("Please type your answer below")
             TextEditor(text: $textContent)
-                        .foregroundColor(.secondary) // Set the text color
-                        .padding() // Add some padding around the text editor
-                        .border(Color.gray, width: 1) // Optional: Add a border
-                        .padding() // Add padding around the border if added
+                        .foregroundColor(.secondary)
+                        .padding()
+                        .border(Color.gray, width: 1)
+                        .padding()
             Button("Done") {
-                state = .result
+                users[currentUserIndex].update(content: textContent)
+                textContent.removeAll()
+                if currentUserIndex == users.count - 1{
+                    state = .result
+                } else {
+                    currentUserIndex += 1
+                }
             }
             .padding()
             .foregroundColor(.white)
@@ -34,8 +44,9 @@ struct UserInputView: View {
 
 struct UserInputView_Previews: PreviewProvider {
     @State static var state = GameState.setting
+    @State static var users = [User]()
 
     static var previews: some View {
-        UserInputView(state: $state)
+        UserInputView(state: $state, users: $users)
     }
 }

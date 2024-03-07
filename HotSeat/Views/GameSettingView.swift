@@ -9,22 +9,28 @@ import SwiftUI
 
 struct GameSettingView: View {
     @Binding var state: GameState
-    @State private var playerAmount = ""
+    @Binding var users: [User]
+    @State private var selectedNumber: Int = 2
+    @State private var numbersRange = 2...24
     
+
     var body: some View {
         VStack {
-            Text("Hello, welcome to the Hot Seat! 🤓")
+            Text("Amount of Players 🤓")
                 .padding()
                 .font(.headline)
 
-            TextField("Number of players", text: $playerAmount)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .border(Color.gray)
-                            .frame(width: 150)
-                            .keyboardType(.numberPad)
+            Picker("Select a number", selection: $selectedNumber) {
+                    ForEach(numbersRange, id: \.self) { number in
+                        Text("\(number)").tag(number)
+                    }
+                }
+            .pickerStyle(.inline)
+            
             
             Button("START") {
+                print(selectedNumber)
+                generateUsers()
                 state = .typing
             }
             .padding()
@@ -33,15 +39,24 @@ struct GameSettingView: View {
             .cornerRadius(8)
             
         }
-        .navigationTitle("Wow")
         .padding()
+    }
+
+    private func generateUsers() {
+        var newUsers = [User]()
+        print(selectedNumber)
+        for i in 0...(selectedNumber - 1) {
+            newUsers.append(.init(id: "Player\(i)"))
+        }
+        users = newUsers
     }
 }
 
 struct GameSettingView_Previews: PreviewProvider {
     @State static var state = GameState.setting
+    @State static var users = [User]()
 
     static var previews: some View {
-        GameSettingView(state: $state)
+        GameSettingView(state: $state, users: $users)
     }
 }
