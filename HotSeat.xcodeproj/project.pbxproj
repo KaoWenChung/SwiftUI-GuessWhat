@@ -14,6 +14,7 @@
 		210D47582B9A4B5500A7E314 /* HotSeatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47572B9A4B5500A7E314 /* HotSeatTests.swift */; };
 		210D47622B9A4B5500A7E314 /* HotSeatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47612B9A4B5500A7E314 /* HotSeatUITests.swift */; };
 		210D47642B9A4B5500A7E314 /* HotSeatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47632B9A4B5500A7E314 /* HotSeatUITestsLaunchTests.swift */; };
+		210D47722B9A50E200A7E314 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47712B9A50E200A7E314 /* Playground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		210D475D2B9A4B5500A7E314 /* HotSeatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotSeatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		210D47612B9A4B5500A7E314 /* HotSeatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatUITests.swift; sourceTree = "<group>"; };
 		210D47632B9A4B5500A7E314 /* HotSeatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		210D47712B9A50E200A7E314 /* Playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				210D47452B9A4B5200A7E314 /* HotSeatApp.swift */,
-				210D47472B9A4B5200A7E314 /* ContentView.swift */,
+				210D47702B9A50B200A7E314 /* Views */,
 				210D47492B9A4B5400A7E314 /* Assets.xcassets */,
 				210D474B2B9A4B5400A7E314 /* HotSeat.entitlements */,
 				210D474C2B9A4B5400A7E314 /* Preview Content */,
@@ -127,6 +129,15 @@
 				210D47632B9A4B5500A7E314 /* HotSeatUITestsLaunchTests.swift */,
 			);
 			path = HotSeatUITests;
+			sourceTree = "<group>";
+		};
+		210D47702B9A50B200A7E314 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				210D47472B9A4B5200A7E314 /* ContentView.swift */,
+				210D47712B9A50E200A7E314 /* Playground.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				210D47482B9A4B5200A7E314 /* ContentView.swift in Sources */,
 				210D47462B9A4B5200A7E314 /* HotSeatApp.swift in Sources */,
+				210D47722B9A50E200A7E314 /* Playground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
