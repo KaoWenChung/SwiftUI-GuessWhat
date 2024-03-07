@@ -14,7 +14,10 @@
 		210D47582B9A4B5500A7E314 /* HotSeatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47572B9A4B5500A7E314 /* HotSeatTests.swift */; };
 		210D47622B9A4B5500A7E314 /* HotSeatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47612B9A4B5500A7E314 /* HotSeatUITests.swift */; };
 		210D47642B9A4B5500A7E314 /* HotSeatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47632B9A4B5500A7E314 /* HotSeatUITestsLaunchTests.swift */; };
-		210D47722B9A50E200A7E314 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47712B9A50E200A7E314 /* Playground.swift */; };
+		210D47722B9A50E200A7E314 /* GameSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47712B9A50E200A7E314 /* GameSettingView.swift */; };
+		210D47742B9A545E00A7E314 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47732B9A545E00A7E314 /* UserInputView.swift */; };
+		210D47762B9A573100A7E314 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47752B9A573100A7E314 /* ResultView.swift */; };
+		210D47792B9A5B8200A7E314 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47782B9A5B8200A7E314 /* AnyTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,10 @@
 		210D475D2B9A4B5500A7E314 /* HotSeatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotSeatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		210D47612B9A4B5500A7E314 /* HotSeatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatUITests.swift; sourceTree = "<group>"; };
 		210D47632B9A4B5500A7E314 /* HotSeatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		210D47712B9A50E200A7E314 /* Playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground.swift; sourceTree = "<group>"; };
+		210D47712B9A50E200A7E314 /* GameSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingView.swift; sourceTree = "<group>"; };
+		210D47732B9A545E00A7E314 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
+		210D47752B9A573100A7E314 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		210D47782B9A5B8200A7E314 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				210D47452B9A4B5200A7E314 /* HotSeatApp.swift */,
+				210D47772B9A5B7100A7E314 /* Extension */,
 				210D47702B9A50B200A7E314 /* Views */,
 				210D47492B9A4B5400A7E314 /* Assets.xcassets */,
 				210D474B2B9A4B5400A7E314 /* HotSeat.entitlements */,
@@ -135,9 +142,19 @@
 			isa = PBXGroup;
 			children = (
 				210D47472B9A4B5200A7E314 /* ContentView.swift */,
-				210D47712B9A50E200A7E314 /* Playground.swift */,
+				210D47752B9A573100A7E314 /* ResultView.swift */,
+				210D47712B9A50E200A7E314 /* GameSettingView.swift */,
+				210D47732B9A545E00A7E314 /* UserInputView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		210D47772B9A5B7100A7E314 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				210D47782B9A5B8200A7E314 /* AnyTransition.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210D47742B9A545E00A7E314 /* UserInputView.swift in Sources */,
 				210D47482B9A4B5200A7E314 /* ContentView.swift in Sources */,
+				210D47762B9A573100A7E314 /* ResultView.swift in Sources */,
 				210D47462B9A4B5200A7E314 /* HotSeatApp.swift in Sources */,
-				210D47722B9A50E200A7E314 /* Playground.swift in Sources */,
+				210D47722B9A50E200A7E314 /* GameSettingView.swift in Sources */,
+				210D47792B9A5B8200A7E314 /* AnyTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

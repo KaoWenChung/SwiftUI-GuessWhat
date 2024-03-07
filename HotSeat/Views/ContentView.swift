@@ -7,45 +7,30 @@
 
 import SwiftUI
 
+enum GameState {
+    case setting
+    case typing
+    case result
+}
+
 struct ContentView: View {
-    @State private var playerAmount = ""
+    @State private var state: GameState = .setting
 
     var body: some View {
-        NavigationView {
-                    VStack {
-                        // This NavigationLink activates when the button is tapped
-                        NavigationLink(destination: PlaygroundView()) {
-                            Text("Go to Detail Page")
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.blue)
-                                .cornerRadius(10)
-                        }
-                        .navigationTitle("Main Page")
-                    }
-                }
-//        VStack {
-//            Text("Hello, welcome to the Hot Seat! 🤓")
-//                .padding()
-//                .font(.headline)
-//
-//            TextField("Number of players", text: $playerAmount)
-//                            .padding()
-//                            .frame(maxWidth: .infinity)
-//                            .border(Color.gray)
-//                            .frame(width: 150)
-//                            .keyboardType(.numberPad)
-//            
-//            Button("START") {
-//                print("Did press START ")
-//            }
-//            .padding()
-//            .foregroundColor(.white)
-//            .background(Color.blue)
-//            .cornerRadius(8)
-//            
-//        }
-//        .padding()
+        VStack {
+            switch state {
+            case .setting:
+                GameSettingView(state: $state)
+                    .transition(.slideAndFade)
+            case .typing:
+                UserInputView(state: $state)
+                    .transition(.slideAndFade)
+            case .result:
+                ResultView(state: $state)
+                    .transition(.slideAndFade)
+            }
+        }
+        .animation(.default, value: state)
     }
 }
 

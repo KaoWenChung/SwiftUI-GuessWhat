@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct PlaygroundView: View {
+struct GameSettingView: View {
+    @Binding var state: GameState
     @State private var playerAmount = ""
     
     var body: some View {
@@ -24,7 +25,7 @@ struct PlaygroundView: View {
                             .keyboardType(.numberPad)
             
             Button("START") {
-                print("Did press START ")
+                state = .typing
             }
             .padding()
             .foregroundColor(.white)
@@ -32,10 +33,15 @@ struct PlaygroundView: View {
             .cornerRadius(8)
             
         }
+        .navigationTitle("Wow")
         .padding()
     }
 }
 
-#Preview {
-    PlaygroundView()
+struct GameSettingView_Previews: PreviewProvider {
+    @State static var state = GameState.setting
+
+    static var previews: some View {
+        GameSettingView(state: $state)
+    }
 }
