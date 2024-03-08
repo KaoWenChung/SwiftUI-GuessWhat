@@ -19,21 +19,30 @@ struct ResultView: View {
     }
     var body: some View {
         VStack {
-            Text(content)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.teal)
-                .cornerRadius(10)
+            ScrollView {
+                VStack(spacing: 0) {
+                    ForEach(users.indices) { _ in
+                        ChatBubble(direction: .left) {
+                            Text("Hello!")
+                                .padding(.all, 20)
+                                .foregroundColor(Color.white)
+                                .background(Color.blue)
+                        }
+                    }
+                }
+            }
             Button("RESTART") {
                 state = .setting
             }
         }
     }
+    
 }
 
 struct ResultView_Previews: PreviewProvider {
     @State static var state = GameState.setting
-    @State static var users = [User]()
+    @State static var users: [User] = [.init(id: "test1", content: "Wow"),
+                                       .init(id: "test2", content: "Hi")]
 
     static var previews: some View {
         ResultView(state: $state, users: $users)

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210329CC2B9BC5A70009EC0A /* ChatBubbleDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210329CB2B9BC5A70009EC0A /* ChatBubbleDemo.swift */; };
+		210329D02B9BCDCF0009EC0A /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210329CF2B9BCDCF0009EC0A /* ChatBubbleShape.swift */; };
+		210329D22B9BCDEF0009EC0A /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210329D12B9BCDEF0009EC0A /* ChatBubble.swift */; };
 		210D47462B9A4B5200A7E314 /* HotSeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47452B9A4B5200A7E314 /* HotSeatApp.swift */; };
 		210D47482B9A4B5200A7E314 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47472B9A4B5200A7E314 /* ContentView.swift */; };
 		210D474A2B9A4B5400A7E314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210D47492B9A4B5400A7E314 /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		210329CB2B9BC5A70009EC0A /* ChatBubbleDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleDemo.swift; sourceTree = "<group>"; };
+		210329CF2B9BCDCF0009EC0A /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
+		210329D12B9BCDEF0009EC0A /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		210D47422B9A4B5200A7E314 /* HotSeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		210D47452B9A4B5200A7E314 /* HotSeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatApp.swift; sourceTree = "<group>"; };
 		210D47472B9A4B5200A7E314 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +88,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210329CA2B9BC5910009EC0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				210329CE2B9BCDBA0009EC0A /* ChatBubble */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		210329CD2B9BC6EB0009EC0A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		210329CE2B9BCDBA0009EC0A /* ChatBubble */ = {
+			isa = PBXGroup;
+			children = (
+				210329CB2B9BC5A70009EC0A /* ChatBubbleDemo.swift */,
+				210329CF2B9BCDCF0009EC0A /* ChatBubbleShape.swift */,
+				210329D12B9BCDEF0009EC0A /* ChatBubble.swift */,
+			);
+			path = ChatBubble;
+			sourceTree = "<group>";
+		};
 		210D47392B9A4B5200A7E314 = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +139,7 @@
 				210D47452B9A4B5200A7E314 /* HotSeatApp.swift */,
 				210D477A2B9A5E0600A7E314 /* Model */,
 				210D47772B9A5B7100A7E314 /* Extension */,
-				210D47702B9A50B200A7E314 /* Views */,
+				210D47702B9A50B200A7E314 /* Presentation */,
 				210D47492B9A4B5400A7E314 /* Assets.xcassets */,
 				210D474B2B9A4B5400A7E314 /* HotSeat.entitlements */,
 				210D474C2B9A4B5400A7E314 /* Preview Content */,
@@ -141,15 +172,17 @@
 			path = HotSeatUITests;
 			sourceTree = "<group>";
 		};
-		210D47702B9A50B200A7E314 /* Views */ = {
+		210D47702B9A50B200A7E314 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				210329CD2B9BC6EB0009EC0A /* ViewModel */,
+				210329CA2B9BC5910009EC0A /* Views */,
 				210D47472B9A4B5200A7E314 /* ContentView.swift */,
 				210D47712B9A50E200A7E314 /* GameSettingView.swift */,
 				210D47732B9A545E00A7E314 /* UserInputView.swift */,
 				210D47752B9A573100A7E314 /* ResultView.swift */,
 			);
-			path = Views;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		210D47772B9A5B7100A7E314 /* Extension */ = {
@@ -299,10 +332,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				210D47742B9A545E00A7E314 /* UserInputView.swift in Sources */,
+				210329D22B9BCDEF0009EC0A /* ChatBubble.swift in Sources */,
+				210329D02B9BCDCF0009EC0A /* ChatBubbleShape.swift in Sources */,
 				210D47482B9A4B5200A7E314 /* ContentView.swift in Sources */,
 				210D47762B9A573100A7E314 /* ResultView.swift in Sources */,
 				210D47462B9A4B5200A7E314 /* HotSeatApp.swift in Sources */,
 				210D47722B9A50E200A7E314 /* GameSettingView.swift in Sources */,
+				210329CC2B9BC5A70009EC0A /* ChatBubbleDemo.swift in Sources */,
 				210D47792B9A5B8200A7E314 /* AnyTransition.swift in Sources */,
 				210D477C2B9A5E0D00A7E314 /* User.swift in Sources */,
 			);
