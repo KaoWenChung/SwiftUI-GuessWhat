@@ -26,12 +26,12 @@ struct UserInputView: View {
                         .border(Color.gray, width: 1)
                         .padding()
             HStack {
-                Button("Back") {
+                Button("RESET") {
                     state = .setting
                 }
                 .applyButtonStyle()
                 Spacer()
-                Button("Done") {
+                Button("DONE") {
                     users[currentUserIndex].update(content: textContent)
                     textContent.removeAll()
                     if currentUserIndex == users.count - 1{

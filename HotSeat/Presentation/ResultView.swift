@@ -31,19 +31,17 @@ struct ResultView: View {
                 }
             }
             HStack {
-                Button(isOrdered ? "Back" : "ANSWER") {
+                Button(isOrdered ? "BACK" : "ANSWER") {
                     state = isOrdered ? .randomResult : .orderResult
                 }
                 .applyButtonStyle()
                 Spacer()
-                Button("RESTART") {
+                Button("PLAY AGAIN") {
                     state = .setting
                 }
                 .applyButtonStyle()
             }
         }
-        .padding(.leading, 24)
-        .padding(.trailing, 24)
     }
     
 }
