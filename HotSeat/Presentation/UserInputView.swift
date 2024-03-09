@@ -29,7 +29,7 @@ struct UserInputView: View {
                 users[currentUserIndex].update(content: textContent)
                 textContent.removeAll()
                 if currentUserIndex == users.count - 1{
-                    state = .result
+                    state = .randomResult
                 } else {
                     currentUserIndex += 1
                 }

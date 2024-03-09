@@ -10,7 +10,9 @@ import SwiftUI
 enum GameState {
     case setting
     case typing
-    case result
+    case randomResult
+    case orderResult
+    
 }
 
 struct ContentView: View {
@@ -22,13 +24,17 @@ struct ContentView: View {
             switch state {
             case .setting:
                 GameSettingView(state: $state, users: $users)
-                    .transition(.slideAndFade)
+                    .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .typing:
                 UserInputView(state: $state, users: $users)
-                    .transition(.slideAndFade)
-            case .result:
-                ResultView(state: $state, users: $users)
-                    .transition(.slideAndFade)
+                    .transition(.slideAndFade(insertion: .bottom, removal: .top))
+            case .randomResult:
+                ResultView(isOrdered: false, state: $state, users: $users)
+                    .transition(.slideAndFade(insertion: .bottom, removal: .top))
+            case .orderResult:
+                ResultView(isOrdered: true, state: $state, users: $users)
+                    .transition(.slideAndFade(insertion: .top, removal: .bottom))
+                
             }
         }
         .animation(.default, value: state)

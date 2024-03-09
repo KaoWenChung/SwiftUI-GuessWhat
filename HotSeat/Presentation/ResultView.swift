@@ -8,24 +8,18 @@
 import SwiftUI
 
 struct ResultView: View {
+    let isOrdered: Bool
     @Binding var state: GameState
     @Binding var users: [User]
-    var content: String {
-        let shuffleContent = users
-            .map { $0.content }
-            .shuffled()
-            .joined(separator: "\n")
-        return shuffleContent
-    }
     var body: some View {
         VStack {
             ScrollView {
                 VStack(spacing: 0) {
-                    ForEach(users.shuffled(), id: \.id) { user in
+                    ForEach(isOrdered ? users : users.shuffled(), id: \.id) { user in
                         HStack(alignment: .bottom,
                                spacing: 0,
                                content: {
-                            Text("😎")
+                            Text(isOrdered ? user.id : "😎")
                             ChatBubble(direction: .left) {
                                 Text(user.content)
                                     .padding(.all, 20)
@@ -36,8 +30,14 @@ struct ResultView: View {
                     }
                 }
             }
-            Button("RESTART") {
-                state = .setting
+            HStack {
+                Button(isOrdered ? "Back" : "ANSWER") {
+                    state = isOrdered ? .randomResult : .orderResult
+                }
+                Spacer()
+                Button("RESTART") {
+                    state = .setting
+                }
             }
         }
         .padding(.leading, 24)
@@ -52,6 +52,6 @@ struct ResultView_Previews: PreviewProvider {
                                        .init(id: "test2", content: "Hi")]
 
     static var previews: some View {
-        ResultView(state: $state, users: $users)
+        ResultView(isOrdered: false, state: $state, users: $users)
     }
 }
