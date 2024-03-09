@@ -33,10 +33,7 @@ struct GameSettingView: View {
                 generateUsers()
                 state = .typing
             }
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(8)
+            .applyButtonStyle()
             
         }
         .padding()

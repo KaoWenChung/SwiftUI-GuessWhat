@@ -34,10 +34,12 @@ struct ResultView: View {
                 Button(isOrdered ? "Back" : "ANSWER") {
                     state = isOrdered ? .randomResult : .orderResult
                 }
+                .applyButtonStyle()
                 Spacer()
                 Button("RESTART") {
                     state = .setting
                 }
+                .applyButtonStyle()
             }
         }
         .padding(.leading, 24)

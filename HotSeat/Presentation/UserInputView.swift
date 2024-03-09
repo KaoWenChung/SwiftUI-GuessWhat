@@ -25,19 +25,23 @@ struct UserInputView: View {
                         .padding()
                         .border(Color.gray, width: 1)
                         .padding()
-            Button("Done") {
-                users[currentUserIndex].update(content: textContent)
-                textContent.removeAll()
-                if currentUserIndex == users.count - 1{
-                    state = .randomResult
-                } else {
-                    currentUserIndex += 1
+            HStack {
+                Button("Back") {
+                    state = .setting
                 }
+                .applyButtonStyle()
+                Spacer()
+                Button("Done") {
+                    users[currentUserIndex].update(content: textContent)
+                    textContent.removeAll()
+                    if currentUserIndex == users.count - 1{
+                        state = .randomResult
+                    } else {
+                        currentUserIndex += 1
+                    }
+                }
+                .applyButtonStyle()
             }
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(8)
         }
     }
 }
