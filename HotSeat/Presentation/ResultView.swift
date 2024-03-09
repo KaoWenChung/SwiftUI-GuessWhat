@@ -21,13 +21,18 @@ struct ResultView: View {
         VStack {
             ScrollView {
                 VStack(spacing: 0) {
-                    ForEach(users.indices) { _ in
-                        ChatBubble(direction: .left) {
-                            Text("Hello!")
-                                .padding(.all, 20)
-                                .foregroundColor(Color.white)
-                                .background(Color.blue)
-                        }
+                    ForEach(users.shuffled(), id: \.id) { user in
+                        HStack(alignment: .bottom,
+                               spacing: 0,
+                               content: {
+                            Text("😎")
+                            ChatBubble(direction: .left) {
+                                Text(user.content)
+                                    .padding(.all, 20)
+                                    .foregroundColor(Color.white)
+                                    .background(Color.blue)
+                            }
+                        })
                     }
                 }
             }
@@ -35,6 +40,8 @@ struct ResultView: View {
                 state = .setting
             }
         }
+        .padding(.leading, 24)
+        .padding(.trailing, 24)
     }
     
 }

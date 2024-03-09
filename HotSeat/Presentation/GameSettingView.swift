@@ -45,7 +45,7 @@ struct GameSettingView: View {
     private func generateUsers() {
         var newUsers = [User]()
         print(selectedNumber)
-        for i in 0...(selectedNumber - 1) {
+        for i in 1...(selectedNumber) {
             newUsers.append(.init(id: "Player\(i)"))
         }
         users = newUsers
