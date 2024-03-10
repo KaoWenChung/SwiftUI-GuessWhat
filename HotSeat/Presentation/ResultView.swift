@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ResultView: View {
     let isOrdered: Bool
-    @Binding var state: GameState
-    @Binding var users: [User]
+    @ObservedObject var viewModel: GameViewModel
+
     var body: some View {
         VStack {
+            let users = viewModel.users
             ScrollView {
                 VStack(spacing: 0) {
                     ForEach(isOrdered ? users : users.shuffled(), id: \.id) { user in
@@ -32,12 +33,12 @@ struct ResultView: View {
             }
             HStack {
                 Button(isOrdered ? "BACK" : "ANSWER") {
-                    state = isOrdered ? .randomResult : .orderResult
+                    viewModel.state = isOrdered ? .randomResult : .orderResult
                 }
                 .applyButtonStyle()
                 Spacer()
                 Button("PLAY AGAIN") {
-                    state = .setting
+                    viewModel.state = .setting
                 }
                 .applyButtonStyle()
             }
@@ -46,12 +47,10 @@ struct ResultView: View {
     
 }
 
+#if DEBUG
 struct ResultView_Previews: PreviewProvider {
-    @State static var state = GameState.setting
-    @State static var users: [User] = [.init(id: "test1", content: "Wow"),
-                                       .init(id: "test2", content: "Hi")]
-
     static var previews: some View {
-        ResultView(isOrdered: false, state: $state, users: $users)
+        ResultView(isOrdered: true, viewModel: GameViewModel())
     }
 }
+#endif

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct UserInputView: View {
-    @Binding var state: GameState
-    @Binding var users: [User]
-    private var playerLabel: String {
-        return users[currentUserIndex].id
-    }
+    @ObservedObject var viewModel: GameViewModel
     @State private var textContent: String = ""
     @State private var currentUserIndex: Int = 0
+
+    private var playerLabel: String {
+        return viewModel.users[currentUserIndex].id
+    }
 
     var body: some View {
         VStack {
@@ -27,15 +27,15 @@ struct UserInputView: View {
                         .padding()
             HStack {
                 Button("RESET") {
-                    state = .setting
+                    viewModel.state = .setting
                 }
                 .applyButtonStyle()
                 Spacer()
                 Button("DONE") {
-                    users[currentUserIndex].update(content: textContent)
+                    viewModel.users[currentUserIndex].update(content: textContent)
                     textContent.removeAll()
-                    if currentUserIndex == users.count - 1{
-                        state = .randomResult
+                    if currentUserIndex == viewModel.users.count - 1{
+                        viewModel.state = .randomResult
                     } else {
                         currentUserIndex += 1
                     }
@@ -46,11 +46,11 @@ struct UserInputView: View {
     }
 }
 
+#if DEBUG
 struct UserInputView_Previews: PreviewProvider {
-    @State static var state = GameState.setting
-    @State static var users = [User]()
 
     static var previews: some View {
-        UserInputView(state: $state, users: $users)
+        UserInputView(viewModel: GameViewModel())
     }
 }
+#endif

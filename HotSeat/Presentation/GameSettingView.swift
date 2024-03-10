@@ -7,12 +7,10 @@
 
 import SwiftUI
 
+final class GameSettingViewModel {}
+
 struct GameSettingView: View {
-    @Binding var state: GameState
-    @Binding var users: [User]
-    @State private var selectedNumber: Int = 2
-    @State private var numbersRange = 2...24
-    
+    @ObservedObject var viewModel: GameViewModel
 
     var body: some View {
         VStack {
@@ -20,8 +18,8 @@ struct GameSettingView: View {
                 .padding()
                 .font(.headline)
 
-            Picker("Select a number", selection: $selectedNumber) {
-                    ForEach(numbersRange, id: \.self) { number in
+            Picker("Select a number", selection: $viewModel.selectedNumber) {
+                ForEach(viewModel.numberRange, id: \.self) { number in
                         Text("\(number)").tag(number)
                     }
                 }
@@ -29,9 +27,8 @@ struct GameSettingView: View {
             
             
             Button("START") {
-                print(selectedNumber)
-                generateUsers()
-                state = .typing
+                viewModel.generateUsers()
+                viewModel.state = .typing
             }
             .applyButtonStyle()
             
@@ -41,19 +38,17 @@ struct GameSettingView: View {
 
     private func generateUsers() {
         var newUsers = [User]()
-        print(selectedNumber)
-        for i in 1...(selectedNumber) {
+        for i in 1...(viewModel.selectedNumber) {
             newUsers.append(.init(id: "Player\(i)"))
         }
-        users = newUsers
+        viewModel.users = newUsers
     }
 }
 
+#if DEBUG
 struct GameSettingView_Previews: PreviewProvider {
-    @State static var state = GameState.setting
-    @State static var users = [User]()
-
     static var previews: some View {
-        GameSettingView(state: $state, users: $users)
+        GameSettingView(viewModel: GameViewModel())
     }
 }
+#endif

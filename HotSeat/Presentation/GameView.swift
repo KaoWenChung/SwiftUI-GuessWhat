@@ -15,24 +15,25 @@ enum GameState {
     
 }
 
-struct ContentView: View {
-    @State private var state: GameState = .setting
-    @State private var users: [User] = []
+struct GameView: View {
+    @StateObject private var viewModel = GameViewModel()
 
     var body: some View {
+        let state = viewModel.state
         VStack {
+            
             switch state {
             case .setting:
-                GameSettingView(state: $state, users: $users)
+                GameSettingView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .typing:
-                UserInputView(state: $state, users: $users)
+                UserInputView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .randomResult:
-                ResultView(isOrdered: false, state: $state, users: $users)
+                ResultView(isOrdered: false, viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .orderResult:
-                ResultView(isOrdered: true, state: $state, users: $users)
+                ResultView(isOrdered: true, viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .top, removal: .bottom))
                 
             }
@@ -42,6 +43,10 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+#if DEBUG
+struct GameView_Previews: PreviewProvider {
+    static var previews: some View {
+        GameView()
+    }
 }
+#endif
