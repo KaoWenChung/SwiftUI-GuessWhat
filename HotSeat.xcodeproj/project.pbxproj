@@ -12,7 +12,7 @@
 		210329D22B9BCDEF0009EC0A /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210329D12B9BCDEF0009EC0A /* ChatBubble.swift */; };
 		210329D42B9D1CA40009EC0A /* ButtonStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210329D32B9D1CA40009EC0A /* ButtonStyleModifier.swift */; };
 		210329D62B9D1DC60009EC0A /* PagePaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210329D52B9D1DC60009EC0A /* PagePaddingModifier.swift */; };
-		210329D82B9E34760009EC0A /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210329D72B9E34760009EC0A /* GameViewModel.swift */; };
+		210329D82B9E34760009EC0A /* GameSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210329D72B9E34760009EC0A /* GameSessionViewModel.swift */; };
 		210D47462B9A4B5200A7E314 /* HotSeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47452B9A4B5200A7E314 /* HotSeatApp.swift */; };
 		210D47482B9A4B5200A7E314 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D47472B9A4B5200A7E314 /* GameView.swift */; };
 		210D474A2B9A4B5400A7E314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210D47492B9A4B5400A7E314 /* Assets.xcassets */; };
@@ -50,7 +50,7 @@
 		210329D12B9BCDEF0009EC0A /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		210329D32B9D1CA40009EC0A /* ButtonStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleModifier.swift; sourceTree = "<group>"; };
 		210329D52B9D1DC60009EC0A /* PagePaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagePaddingModifier.swift; sourceTree = "<group>"; };
-		210329D72B9E34760009EC0A /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		210329D72B9E34760009EC0A /* GameSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionViewModel.swift; sourceTree = "<group>"; };
 		210D47422B9A4B5200A7E314 /* HotSeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		210D47452B9A4B5200A7E314 /* HotSeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatApp.swift; sourceTree = "<group>"; };
 		210D47472B9A4B5200A7E314 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		210329CD2B9BC6EB0009EC0A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				210329D72B9E34760009EC0A /* GameViewModel.swift */,
+				210329D72B9E34760009EC0A /* GameSessionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 				210329D62B9D1DC60009EC0A /* PagePaddingModifier.swift in Sources */,
 				210D47482B9A4B5200A7E314 /* GameView.swift in Sources */,
 				210D47762B9A573100A7E314 /* ResultView.swift in Sources */,
-				210329D82B9E34760009EC0A /* GameViewModel.swift in Sources */,
+				210329D82B9E34760009EC0A /* GameSessionViewModel.swift in Sources */,
 				210D47462B9A4B5200A7E314 /* HotSeatApp.swift in Sources */,
 				210D47722B9A50E200A7E314 /* GameSettingView.swift in Sources */,
 				210329D42B9D1CA40009EC0A /* ButtonStyleModifier.swift in Sources */,

@@ -7,15 +7,17 @@
 
 import SwiftUI
 
-final class GameViewModel: ObservableObject {
+final class GameSessionViewModel: ObservableObject {
     @Published var state: GameState = .setting
     @Published var users = [User]()
     var selectedNumber: Int = 2
     let numberRange = 2...24
 }
 
-extension GameViewModel {
+extension GameSessionViewModel {
     func reset() {
+        state = .setting
+        users.removeAll()
     }
 
     func generateUsers() {

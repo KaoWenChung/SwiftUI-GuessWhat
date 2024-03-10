@@ -10,7 +10,7 @@ import SwiftUI
 final class GameSettingViewModel {}
 
 struct GameSettingView: View {
-    @ObservedObject var viewModel: GameViewModel
+    @ObservedObject var viewModel: GameSessionViewModel
 
     var body: some View {
         VStack {
@@ -48,7 +48,7 @@ struct GameSettingView: View {
 #if DEBUG
 struct GameSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        GameSettingView(viewModel: GameViewModel())
+        GameSettingView(viewModel: GameSessionViewModel())
     }
 }
 #endif

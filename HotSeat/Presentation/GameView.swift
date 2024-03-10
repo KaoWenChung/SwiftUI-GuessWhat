@@ -16,7 +16,7 @@ enum GameState {
 }
 
 struct GameView: View {
-    @StateObject private var viewModel = GameViewModel()
+    @StateObject private var viewModel = GameSessionViewModel()
 
     var body: some View {
         let state = viewModel.state
