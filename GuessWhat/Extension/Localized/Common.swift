@@ -5,4 +5,8 @@
 //  Created by wyn on 2024/3/14.
 //
 
-import Foundation
+enum CommonString: LocalizedStringType {
+    case back
+    case done
+    case next
+}

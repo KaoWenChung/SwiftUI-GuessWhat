@@ -5,3 +5,13 @@
   Created by wyn on 2024/3/14.
   
 */
+
+// MARK: - UserInputViewText
+"UserInputViewText.instruction" = "Please type your answer below";
+"UserInputViewText.unknownPlayer" = "Unknown Player";
+
+
+// MARK: - CommonString
+"CommonString.back" = "BACK";
+"CommonString.done" = "DONE";
+"CommonString.next" = "NEXT";

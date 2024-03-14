@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct UserInputView: View {
+    enum UserInputViewText: LocalizedStringType {
+        case unknownPlayer
+        case instruction
+    }
     @ObservedObject var viewModel: GameSessionViewModel
     @State private var textContent: String = ""
     @State private var currentUserIndex: Int = 0
 
     private var currentPlayerLabel: String {
-        viewModel.players.indices.contains(currentUserIndex) ? viewModel.players[currentUserIndex].id : "Unknown Player"
+        viewModel.players.indices.contains(currentUserIndex) ? viewModel.players[currentUserIndex].id : UserInputViewText.unknownPlayer.text
     }
 
     private var isLastUser: Bool {
@@ -31,7 +35,7 @@ struct UserInputView: View {
     }
 
     private var instructionText: some View {
-        Text("Please type your answer below")
+        Text(UserInputViewText.instruction.text)
             .padding(.vertical)
     }
 
@@ -45,12 +49,12 @@ struct UserInputView: View {
 
     private var actionButtons: some View {
         HStack {
-            Button("BACK") {
+            Button(CommonString.back.text) {
                 viewModel.state = .setting
             }
             .applyButtonStyle()
             Spacer()
-            Button(isLastUser ? "DONE" : "NEXT") {
+            Button(isLastUser ? CommonString.done.text : CommonString.next.text) {
                 processUserInput()
             }
             .applyButtonStyle()
