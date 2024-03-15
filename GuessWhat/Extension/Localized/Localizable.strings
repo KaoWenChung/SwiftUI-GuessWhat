@@ -15,3 +15,9 @@
 "CommonString.back" = "BACK";
 "CommonString.done" = "DONE";
 "CommonString.next" = "NEXT";
+"CommonString.start" = "START";
+"CommonString.player" = "PLAYER %@";
+
+// MARK: - GameSettingText
+"GameSettingText.amountOfPlayers" = "Amount of Players 🤓";
+"GameSettingText.selectNumber" = "Select a number";

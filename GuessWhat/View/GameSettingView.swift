@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct GameSettingView: View {
+    enum GameSettingText: LocalizedStringType {
+        case amountOfPlayers
+        case selectNumber
+    }
     @ObservedObject var viewModel: GameSessionViewModel
 
     var body: some View {
         VStack {
-            Text("Amount of Players 🤓")
+            Text(GameSettingText.amountOfPlayers.text)
                 .padding()
                 .font(.headline)
 
-            Picker("Select a number", selection: $viewModel.selectedNumber) {
+            Picker(GameSettingText.selectNumber.text, selection: $viewModel.selectedNumber) {
                 ForEach(viewModel.numberRange, id: \.self) { number in
                         Text("\(number)").tag(number)
                     }
@@ -24,7 +28,7 @@ struct GameSettingView: View {
             .pickerStyle(.inline)
             
             
-            Button("START") {
+            Button(CommonString.start.text) {
                 viewModel.generatePlayers()
                 viewModel.state = .typing
             }
@@ -37,7 +41,8 @@ struct GameSettingView: View {
     private func generatePlayers() {
         var newPlayers = [Player]()
         for i in 1...(viewModel.selectedNumber) {
-            newPlayers.append(.init(id: "Player\(i)"))
+            let id = String(format: CommonString.player.text, i.description)
+            newPlayers.append(.init(id: id))
         }
         viewModel.players = newPlayers
     }

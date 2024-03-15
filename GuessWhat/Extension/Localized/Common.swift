@@ -9,4 +9,6 @@ enum CommonString: LocalizedStringType {
     case back
     case done
     case next
+    case start
+    case player
 }
