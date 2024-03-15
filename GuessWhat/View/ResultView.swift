@@ -56,7 +56,7 @@ struct ResultView: View {
             Button(actionLabel, action: handleActionButtonHandler)
             .applyButtonStyle()
             Spacer()
-            Button("PLAY AGAIN") {
+            Button(CommonString.restart.text) {
                 viewModel.reset()
             }
             .applyButtonStyle()
@@ -64,7 +64,7 @@ struct ResultView: View {
     }
 
     private var actionLabel: String {
-        isOrdered ? "BACK" : "ANSWER"
+        isOrdered ? CommonString.back.text : CommonString.answer.text
     }
 
     private func handleActionButtonHandler() {

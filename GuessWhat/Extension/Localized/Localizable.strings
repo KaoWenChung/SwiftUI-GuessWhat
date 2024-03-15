@@ -17,6 +17,8 @@
 "CommonString.next" = "NEXT";
 "CommonString.start" = "START";
 "CommonString.player" = "PLAYER %@";
+"CommonString.answer" = "ANSWER";
+"CommonString.restart" = "PLAY AGAIN";
 
 // MARK: - GameSettingText
 "GameSettingText.amountOfPlayers" = "Amount of Players 🤓";
