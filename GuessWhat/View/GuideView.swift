@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct GuideView: View {
+    @ObservedObject var viewModel: GameSessionViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("WIP!")
+            
+            Button(CommonString.back.text) {
+                viewModel.state = .setting
+            }
+            .applyButtonStyle()
+        }
     }
 }
 
-#Preview {
-    GuideView()
+#if DEBUG
+struct GuideView_Previews: PreviewProvider {
+    static var previews: some View {
+        GuideView(viewModel: GameSessionViewModel())
+    }
 }
+#endif

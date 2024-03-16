@@ -13,8 +13,10 @@ struct GameView: View {
     var body: some View {
         let state = viewModel.state
         VStack {
-            
             switch state {
+            case .guide:
+                GuideView(viewModel: viewModel)
+                    .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .setting:
                 GameSettingView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))

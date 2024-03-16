@@ -8,6 +8,7 @@
 import SwiftUI
 
 enum GameState {
+    case guide
     case setting
     case typing
     case randomResult

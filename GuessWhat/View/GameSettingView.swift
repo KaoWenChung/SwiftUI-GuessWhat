@@ -16,6 +16,20 @@ struct GameSettingView: View {
 
     var body: some View {
         VStack {
+            HStack {
+                Text("Guess What?")
+                    .font(.largeTitle)
+
+                Button(action: {
+                    viewModel.state = .guide
+                }) {
+                    Image(systemName: "questionmark.circle")
+                        .font(.title)
+                }
+            }
+            
+            .padding(.top)
+
             Text(GameSettingText.amountOfPlayers.text)
                 .padding()
                 .font(.headline)

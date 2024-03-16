@@ -28,6 +28,7 @@
 		215ECAA72BA3C40400DFDCC2 /* LocalizedStringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECAA62BA3C40400DFDCC2 /* LocalizedStringType.swift */; };
 		215ECAAA2BA3C43C00DFDCC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 215ECAA92BA3C43C00DFDCC2 /* Localizable.strings */; };
 		215ECAAC2BA3C46F00DFDCC2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECAAB2BA3C46F00DFDCC2 /* Common.swift */; };
+		21B919722BA655A500E45CF0 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B919712BA655A500E45CF0 /* GuideView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		215ECAA62BA3C40400DFDCC2 /* LocalizedStringType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringType.swift; sourceTree = "<group>"; };
 		215ECAA92BA3C43C00DFDCC2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		215ECAAB2BA3C46F00DFDCC2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		21B919712BA655A500E45CF0 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				215ECA872B9FAE1900DFDCC2 /* ChatBubble */,
 				215ECA8E2B9FAE5900DFDCC2 /* GameView.swift */,
+				21B919712BA655A500E45CF0 /* GuideView.swift */,
 				215ECA902B9FAE7B00DFDCC2 /* GameSettingView.swift */,
 				215ECA922B9FAE8C00DFDCC2 /* UserInputView.swift */,
 				215ECA942B9FAE9900DFDCC2 /* ResultView.swift */,
@@ -353,6 +356,7 @@
 				215ECA892B9FAE2400DFDCC2 /* ChatBubbleDemo.swift in Sources */,
 				215ECA932B9FAE8C00DFDCC2 /* UserInputView.swift in Sources */,
 				215ECA8D2B9FAE4A00DFDCC2 /* ChatBubble.swift in Sources */,
+				21B919722BA655A500E45CF0 /* GuideView.swift in Sources */,
 				215ECA8B2B9FAE3C00DFDCC2 /* ChatBubbleShape.swift in Sources */,
 				215ECA912B9FAE7B00DFDCC2 /* GameSettingView.swift in Sources */,
 				215ECA952B9FAE9900DFDCC2 /* ResultView.swift in Sources */,
