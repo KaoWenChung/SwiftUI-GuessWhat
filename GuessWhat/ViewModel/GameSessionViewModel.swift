@@ -21,7 +21,13 @@ final class GameSessionViewModel: ObservableObject {
     @Published var players = [Player]()
     @Published var shuffledPlayers = [Player]()
     var selectedNumber: Int = 2
-    let numberRange = 2...24
+    let numberRange = 2...12
+    var appVersion: String? {
+        guard let dictionary = Bundle.main.infoDictionary,
+              let version = dictionary["CFBundleShortVersionString"] as? String,
+              let build = dictionary["CFBundleVersion"] as? String else { return nil }
+        return "\(version) \(build)"
+    }
 }
 
 extension GameSessionViewModel {

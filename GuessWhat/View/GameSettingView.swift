@@ -13,43 +13,64 @@ struct GameSettingView: View {
         case selectNumber
     }
     @ObservedObject var viewModel: GameSessionViewModel
+    @State private var textContent: String = ""
 
     var body: some View {
-        VStack {
-            HStack {
-                Text("Guess What?")
-                    .font(.largeTitle)
+        ZStack(alignment: .top) {
+            VStack {
+                HStack {
+                    Text("Game Setting")
+                        .font(.largeTitle)
 
-                Button(action: {
-                    viewModel.state = .guide
-                }) {
-                    Image(systemName: "questionmark.circle")
-                        .font(.title)
-                }
-            }
-            
-            .padding(.top)
-
-            Text(GameSettingText.amountOfPlayers.text)
-                .padding()
-                .font(.headline)
-
-            Picker(GameSettingText.selectNumber.text, selection: $viewModel.selectedNumber) {
-                ForEach(viewModel.numberRange, id: \.self) { number in
-                        Text("\(number)").tag(number)
+                    Button(action: {
+                        viewModel.state = .guide
+                    }) {
+                        Image(systemName: "questionmark.circle")
+                            .font(.title)
                     }
                 }
-            .pickerStyle(.inline)
-            
-            
-            Button(CommonString.start.text) {
-                viewModel.generatePlayers()
-                viewModel.state = .typing
+                .padding(.top)
+                if let verision = viewModel.appVersion {
+                    Text("version: \(verision)")
+                }
+                Spacer(minLength: 110)
+
+                HStack {
+                    Text(GameSettingText.amountOfPlayers.text)
+                        .padding()
+                        .font(.headline)
+
+                    Picker(GameSettingText.selectNumber.text, selection: $viewModel.selectedNumber) {
+                        ForEach(viewModel.numberRange, id: \.self) { number in
+                            Text("\(number)").tag(number)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                }
+
+                Text("Question: ")
+                    .padding()
+                    .font(.headline)
+                textEditor
+
+                Button(CommonString.start.text) {
+                    viewModel.generatePlayers()
+                    viewModel.state = .typing
+                }
+                .applyButtonStyle()
+                Spacer()
+                
             }
-            .applyButtonStyle()
-            
+            .padding()
         }
-        .padding()
+    }
+
+    private var textEditor: some View {
+        TextEditor(text: $textContent)
+            .foregroundColor(.secondary)
+            .padding()
+            .border(Color.gray, width: 1)
+            .padding()
     }
 
     private func generatePlayers() {
@@ -70,3 +91,18 @@ struct GameSettingView_Previews: PreviewProvider {
 }
 #endif
 
+struct HalfCircle: Shape {
+    func path(in rect: CGRect) -> Path {
+        Path { path in
+            // Start from the bottom center for a half circle that opens upwards
+            let startAngle = Angle(degrees: 0)
+            let endAngle = Angle(degrees: 180)
+            
+            path.addArc(center: CGPoint(x: rect.midX, y: rect.midY),
+                        radius: rect.width / 2,
+                        startAngle: startAngle,
+                        endAngle: endAngle,
+                        clockwise: false)
+        }
+    }
+}
