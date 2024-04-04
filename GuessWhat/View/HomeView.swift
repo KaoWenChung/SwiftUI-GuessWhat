@@ -12,7 +12,7 @@ struct HomeView: View {
         case quickStart
         case areaConnect
     }
-    @ObservedObject var viewModel: GameSessionViewModel
+    @ObservedObject var viewModel: GameManagerViewModel
     @State private var textContent: String = ""
 
     var body: some View {
@@ -40,22 +40,19 @@ struct HomeView: View {
                 Spacer()
 
                 Button(HomeViewText.quickStart.text) {
-                    viewModel.generatePlayers()
-                    viewModel.state = .typing
+                    viewModel.state = .quickGame
                 }
                 .frame(maxWidth: .infinity)
                 .applyButtonStyle()
 
                 Button(HomeViewText.areaConnect.text) {
-                    viewModel.generatePlayers()
-                    viewModel.state = .typing
+                    viewModel.state = .areaConnect
                 }
                 .frame(maxWidth: .infinity)
                 .applyButtonStyle()
 
                 Button("How To Play") {
-                    viewModel.generatePlayers()
-                    viewModel.state = .typing
+                    viewModel.state = .guide
                 }
                 .frame(maxWidth: .infinity)
                 .applyButtonStyle()
@@ -70,7 +67,7 @@ struct HomeView: View {
 #if DEBUG
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: GameSessionViewModel())
+        HomeView(viewModel: GameManagerViewModel())
     }
 }
 #endif

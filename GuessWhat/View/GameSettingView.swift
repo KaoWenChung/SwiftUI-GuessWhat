@@ -12,7 +12,7 @@ struct GameSettingView: View {
         case amountOfPlayers
         case selectNumber
     }
-    @ObservedObject var viewModel: GameSessionViewModel
+    @ObservedObject var viewModel: QuickGameSessionViewModel
     @State private var textContent: String = ""
 
     var body: some View {
@@ -84,7 +84,7 @@ struct GameSettingView: View {
 #if DEBUG
 struct GameSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        GameSettingView(viewModel: GameSessionViewModel())
+        GameSettingView(viewModel: QuickGameSessionViewModel())
     }
 }
 #endif

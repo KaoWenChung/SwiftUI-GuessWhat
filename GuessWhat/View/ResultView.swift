@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ResultView: View {
-    @ObservedObject var viewModel: GameSessionViewModel
+    @ObservedObject var viewModel: QuickGameSessionViewModel
     private let isOrdered: Bool
 
-    init(isOrdered: Bool, viewModel: GameSessionViewModel) {
+    init(isOrdered: Bool, viewModel: QuickGameSessionViewModel) {
         self.viewModel = viewModel
         self.isOrdered = isOrdered
     }
@@ -75,7 +75,7 @@ struct ResultView: View {
 #if DEBUG
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView(isOrdered: true, viewModel: GameSessionViewModel())
+        ResultView(isOrdered: true, viewModel: QuickGameSessionViewModel())
     }
 }
 #endif

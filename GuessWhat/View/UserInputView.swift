@@ -12,7 +12,7 @@ struct UserInputView: View {
         case unknownPlayer
         case instruction
     }
-    @ObservedObject var viewModel: GameSessionViewModel
+    @ObservedObject var viewModel: QuickGameSessionViewModel
     @State private var textContent: String = ""
     @State private var currentUserIndex: Int = 0
 
@@ -79,7 +79,7 @@ struct UserInputView: View {
 struct UserInputView_Previews: PreviewProvider {
 
     static var previews: some View {
-        UserInputView(viewModel: GameSessionViewModel())
+        UserInputView(viewModel: QuickGameSessionViewModel())
     }
 }
 #endif

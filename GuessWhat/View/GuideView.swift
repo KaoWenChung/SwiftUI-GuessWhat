@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GuideView: View {
-    @ObservedObject var viewModel: GameSessionViewModel
+    @ObservedObject var viewModel: QuickGameSessionViewModel
     var body: some View {
         VStack {
             Text("WIP!")
@@ -24,7 +24,7 @@ struct GuideView: View {
 #if DEBUG
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView(viewModel: GameSessionViewModel())
+        GuideView(viewModel: QuickGameSessionViewModel())
     }
 }
 #endif

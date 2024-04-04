@@ -19,17 +19,18 @@
 		215ECA802B9FADB900DFDCC2 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA7F2B9FADB900DFDCC2 /* AnyTransition.swift */; };
 		215ECA822B9FADC800DFDCC2 /* ButtonStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA812B9FADC800DFDCC2 /* ButtonStyleModifier.swift */; };
 		215ECA842B9FADD700DFDCC2 /* PagePaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA832B9FADD700DFDCC2 /* PagePaddingModifier.swift */; };
-		215ECA862B9FADF000DFDCC2 /* GameSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA852B9FADF000DFDCC2 /* GameSessionViewModel.swift */; };
+		215ECA862B9FADF000DFDCC2 /* QuickGameSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA852B9FADF000DFDCC2 /* QuickGameSessionViewModel.swift */; };
 		215ECA892B9FAE2400DFDCC2 /* ChatBubbleDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA882B9FAE2400DFDCC2 /* ChatBubbleDemo.swift */; };
 		215ECA8B2B9FAE3C00DFDCC2 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA8A2B9FAE3C00DFDCC2 /* ChatBubbleShape.swift */; };
 		215ECA8D2B9FAE4A00DFDCC2 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA8C2B9FAE4A00DFDCC2 /* ChatBubble.swift */; };
-		215ECA8F2B9FAE5900DFDCC2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA8E2B9FAE5900DFDCC2 /* GameView.swift */; };
+		215ECA8F2B9FAE5900DFDCC2 /* LocalGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA8E2B9FAE5900DFDCC2 /* LocalGameView.swift */; };
 		215ECA912B9FAE7B00DFDCC2 /* GameSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA902B9FAE7B00DFDCC2 /* GameSettingView.swift */; };
 		215ECA932B9FAE8C00DFDCC2 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA922B9FAE8C00DFDCC2 /* UserInputView.swift */; };
 		215ECA952B9FAE9900DFDCC2 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA942B9FAE9900DFDCC2 /* ResultView.swift */; };
 		215ECAA72BA3C40400DFDCC2 /* LocalizedStringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECAA62BA3C40400DFDCC2 /* LocalizedStringType.swift */; };
 		215ECAAA2BA3C43C00DFDCC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 215ECAA92BA3C43C00DFDCC2 /* Localizable.strings */; };
 		215ECAAC2BA3C46F00DFDCC2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECAAB2BA3C46F00DFDCC2 /* Common.swift */; };
+		2176F0422BBF504F00B3986F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2176F0412BBF504F00B3986F /* GameView.swift */; };
 		21B919722BA655A500E45CF0 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B919712BA655A500E45CF0 /* GuideView.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,17 +68,18 @@
 		215ECA7F2B9FADB900DFDCC2 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 		215ECA812B9FADC800DFDCC2 /* ButtonStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleModifier.swift; sourceTree = "<group>"; };
 		215ECA832B9FADD700DFDCC2 /* PagePaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagePaddingModifier.swift; sourceTree = "<group>"; };
-		215ECA852B9FADF000DFDCC2 /* GameSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionViewModel.swift; sourceTree = "<group>"; };
+		215ECA852B9FADF000DFDCC2 /* QuickGameSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickGameSessionViewModel.swift; sourceTree = "<group>"; };
 		215ECA882B9FAE2400DFDCC2 /* ChatBubbleDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleDemo.swift; sourceTree = "<group>"; };
 		215ECA8A2B9FAE3C00DFDCC2 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		215ECA8C2B9FAE4A00DFDCC2 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
-		215ECA8E2B9FAE5900DFDCC2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		215ECA8E2B9FAE5900DFDCC2 /* LocalGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGameView.swift; sourceTree = "<group>"; };
 		215ECA902B9FAE7B00DFDCC2 /* GameSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingView.swift; sourceTree = "<group>"; };
 		215ECA922B9FAE8C00DFDCC2 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		215ECA942B9FAE9900DFDCC2 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		215ECAA62BA3C40400DFDCC2 /* LocalizedStringType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringType.swift; sourceTree = "<group>"; };
 		215ECAA92BA3C43C00DFDCC2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		215ECAAB2BA3C46F00DFDCC2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2176F0412BBF504F00B3986F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		21B919712BA655A500E45CF0 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,8 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				215ECA872B9FAE1900DFDCC2 /* ChatBubble */,
-				215ECA8E2B9FAE5900DFDCC2 /* GameView.swift */,
+				215ECA8E2B9FAE5900DFDCC2 /* LocalGameView.swift */,
 				21374BAE2BB8893700426540 /* HomeView.swift */,
+				2176F0412BBF504F00B3986F /* GameView.swift */,
 				21B919712BA655A500E45CF0 /* GuideView.swift */,
 				215ECA902B9FAE7B00DFDCC2 /* GameSettingView.swift */,
 				215ECA922B9FAE8C00DFDCC2 /* UserInputView.swift */,
@@ -183,7 +186,7 @@
 		215ECA7A2B9FAD7E00DFDCC2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				215ECA852B9FADF000DFDCC2 /* GameSessionViewModel.swift */,
+				215ECA852B9FADF000DFDCC2 /* QuickGameSessionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -367,11 +370,12 @@
 				21374BAF2BB8893700426540 /* HomeView.swift in Sources */,
 				215ECA912B9FAE7B00DFDCC2 /* GameSettingView.swift in Sources */,
 				215ECA952B9FAE9900DFDCC2 /* ResultView.swift in Sources */,
-				215ECA862B9FADF000DFDCC2 /* GameSessionViewModel.swift in Sources */,
-				215ECA8F2B9FAE5900DFDCC2 /* GameView.swift in Sources */,
+				215ECA862B9FADF000DFDCC2 /* QuickGameSessionViewModel.swift in Sources */,
+				215ECA8F2B9FAE5900DFDCC2 /* LocalGameView.swift in Sources */,
 				215ECA822B9FADC800DFDCC2 /* ButtonStyleModifier.swift in Sources */,
 				215ECA802B9FADB900DFDCC2 /* AnyTransition.swift in Sources */,
 				215ECAA72BA3C40400DFDCC2 /* LocalizedStringType.swift in Sources */,
+				2176F0422BBF504F00B3986F /* GameView.swift in Sources */,
 				215ECA842B9FADD700DFDCC2 /* PagePaddingModifier.swift in Sources */,
 				215ECA4F2B9FAD5000DFDCC2 /* GuessWhatApp.swift in Sources */,
 				215ECAAC2BA3C46F00DFDCC2 /* Common.swift in Sources */,

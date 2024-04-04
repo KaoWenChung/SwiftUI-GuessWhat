@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum GameState {
+enum LocalGameState {
     case guide
     case setting
     case typing
@@ -16,8 +16,8 @@ enum GameState {
     
 }
 
-final class GameSessionViewModel: ObservableObject {
-    @Published var state: GameState = .setting
+final class QuickGameSessionViewModel: ObservableObject {
+    @Published var state: LocalGameState = .setting
     @Published var players = [Player]()
     @Published var shuffledPlayers = [Player]()
     var selectedNumber: Int = 2
@@ -30,7 +30,7 @@ final class GameSessionViewModel: ObservableObject {
     }
 }
 
-extension GameSessionViewModel {
+extension QuickGameSessionViewModel {
     func reset() {
         state = .setting
         players.removeAll()
