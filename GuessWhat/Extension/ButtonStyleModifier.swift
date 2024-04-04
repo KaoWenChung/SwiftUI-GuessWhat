@@ -11,9 +11,14 @@ struct ButtonStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(8)
+            .foregroundColor(.moonstone)
+            .background(Color.alabaster)
+            .cornerRadius(4)
+            .overlay(
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(Color.moonstone
+                            , lineWidth: 1)
+            )
     }
 }
 
@@ -23,3 +28,4 @@ extension View {
         self.modifier(ButtonStyleModifier())
     }
 }
+

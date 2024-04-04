@@ -29,12 +29,9 @@ struct GameSettingView: View {
                             .font(.title)
                     }
                 }
-                .padding(.top)
-                if let verision = viewModel.appVersion {
-                    Text("version: \(verision)")
-                }
-                Spacer(minLength: 110)
-
+                .padding()
+//                Spacer(minLength: 110)
+                Divider()
                 HStack {
                     Text(GameSettingText.amountOfPlayers.text)
                         .padding()
@@ -47,6 +44,7 @@ struct GameSettingView: View {
                     }
                     .pickerStyle(.menu)
                 }
+                .border(Color.gray, width: 1)
 
                 Text("Question: ")
                     .padding()

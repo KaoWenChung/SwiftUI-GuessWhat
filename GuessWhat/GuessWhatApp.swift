@@ -11,7 +11,7 @@ import SwiftUI
 struct GuessWhatApp: App {
     var body: some Scene {
         WindowGroup {
-            GameView()
+            HomeView(viewModel: GameSessionViewModel())
         }
     }
 }

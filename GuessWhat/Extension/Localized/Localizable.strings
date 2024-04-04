@@ -23,3 +23,7 @@
 // MARK: - GameSettingText
 "GameSettingText.amountOfPlayers" = "Amount of Players: ";
 "GameSettingText.selectNumber" = "Select a number";
+
+// MARK: - HomeViewText
+"HomeViewText.quickStart" = "Local Multiplayer";
+"HomeViewText.areaConnect" = "Online Multiplayer";
