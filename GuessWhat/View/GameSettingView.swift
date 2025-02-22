@@ -19,7 +19,7 @@ struct GameSettingView: View {
         ZStack(alignment: .top) {
             VStack {
                 HStack {
-                    Text("Game Setting")
+                    Text("Players")
                         .font(.largeTitle)
 
                     Button(action: {
@@ -36,6 +36,8 @@ struct GameSettingView: View {
                     Text(GameSettingText.amountOfPlayers.text)
                         .padding()
                         .font(.headline)
+                    
+                    Spacer()
 
                     Picker(GameSettingText.selectNumber.text, selection: $viewModel.selectedNumber) {
                         ForEach(viewModel.numberRange, id: \.self) { number in
@@ -46,20 +48,17 @@ struct GameSettingView: View {
                 }
                 .border(Color.gray, width: 1)
 
-                Text("Question: ")
-                    .padding()
-                    .font(.headline)
-                textEditor
-
                 Button(CommonString.start.text) {
                     viewModel.generatePlayers()
                     viewModel.state = .typing
                 }
+                .frame(maxWidth: .infinity)
                 .applyButtonStyle()
                 Spacer()
                 
             }
             .padding()
+            .background(Color.alabaster)
         }
     }
 

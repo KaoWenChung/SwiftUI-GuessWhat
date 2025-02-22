@@ -21,7 +21,7 @@ final class QuickGameSessionViewModel: ObservableObject {
     @Published var players = [Player]()
     @Published var shuffledPlayers = [Player]()
     var selectedNumber: Int = 2
-    let numberRange = 2...12
+    let numberRange = 3...15
     var appVersion: String? {
         guard let dictionary = Bundle.main.infoDictionary,
               let version = dictionary["CFBundleShortVersionString"] as? String,

@@ -21,7 +21,7 @@
 "CommonString.restart" = "PLAY AGAIN";
 
 // MARK: - GameSettingText
-"GameSettingText.amountOfPlayers" = "Amount of Players: ";
+"GameSettingText.amountOfPlayers" = "Number";
 "GameSettingText.selectNumber" = "Select a number";
 
 // MARK: - HomeViewText
