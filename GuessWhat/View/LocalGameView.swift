@@ -23,9 +23,6 @@ struct LocalGameView: View {
             case .typing:
                 UserInputView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
-//            case .randomResult:
-//                ResultView(viewModel: viewModel)
-//                    .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .vote:
                 VoteView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))

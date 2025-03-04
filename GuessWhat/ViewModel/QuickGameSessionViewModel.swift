@@ -16,10 +16,14 @@ enum LocalGameState {
 }
 
 final class QuickGameSessionViewModel: ObservableObject {
+    enum Constant {
+        static let defaultNumber = 3
+        static let maxNumber = 15
+    }
     @Published var state: LocalGameState = .setting
     @Published var players = [Player]()
     @Published var shuffledPlayers = [Player]()
-    @Published var selectedNumber: Int = 3
+    @Published var selectedNumber: Int = Constant.defaultNumber
     @Published var currentPlayerIndex = 0 {
         didSet {
             if currentPlayerIndex == selectedNumber {
@@ -31,7 +35,7 @@ final class QuickGameSessionViewModel: ObservableObject {
         guard currentPlayerIndex < selectedNumber else { return "" }
         return players[currentPlayerIndex].id
     }
-    let numberRange = 3...15
+    let numberRange = Constant.defaultNumber...Constant.maxNumber
     var appVersion: String? {
         guard let dictionary = Bundle.main.infoDictionary,
               let version = dictionary["CFBundleShortVersionString"] as? String,
@@ -45,6 +49,8 @@ extension QuickGameSessionViewModel {
         state = .setting
         players.removeAll()
         shuffledPlayers.removeAll()
+        selectedNumber = Constant.defaultNumber
+        currentPlayerIndex = 0
     }
 
     func generatePlayers() {
