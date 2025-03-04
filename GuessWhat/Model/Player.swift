@@ -7,8 +7,8 @@
 
 class Player {
     let id: String
-    var content: String = ""
     var selectPlayerID: String = ""
+    private(set) var content: String = ""
     private(set) var numberOfSelected: Int = 0
 
     init(id: String) {

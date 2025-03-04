@@ -51,7 +51,7 @@ struct ResultView: View {
 
     private var actionButtons: some View {
         HStack {
-            Button("Select", action: handleActionButtonHandler)
+            Button("Vote", action: handleActionButtonHandler)
             .applyButtonStyle()
             Spacer()
         }

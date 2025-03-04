@@ -29,7 +29,7 @@ struct LocalGameView: View {
             case .vote:
                 VoteView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
-            case .orderResult:
+            case .voteResult:
                 ResultView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .top, removal: .bottom))
                 

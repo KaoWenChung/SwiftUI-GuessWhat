@@ -40,11 +40,7 @@ struct VoteView: View {
         HStack(alignment: .bottom, spacing: 0) {
             Text("😎")
             ChatBubble(direction: .left, playerID: player.id) { id in
-                if selectedPlayerID == id {
-                    selectedPlayerID = nil
-                } else {
-                    selectedPlayerID = id
-                }
+                selectedPlayerID = id
             } content: {
                 Text(player.content)
                     .padding(20)
@@ -58,15 +54,20 @@ struct VoteView: View {
         HStack {
             
             Spacer()
-            Button("Select", action: handleActionButtonHandler)
-            .applyButtonStyle()
+            Button("Select", action: didSelectHandler)
+                .applyButtonStyle()
         }
     }
 
-    private func handleActionButtonHandler() {
+    private func didSelectHandler() {
         guard let selectedPlayerID else { return }
         
         viewModel.vote(id: selectedPlayerID)
+        viewModel.currentPlayerIndex += 1
         self.selectedPlayerID = nil
+        
+        if viewModel.didAllPlayerVoted {
+            viewModel.state = .voteResult
+        }
     }
 }
