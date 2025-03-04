@@ -10,25 +10,41 @@
 import SwiftUI
 
 struct ChatBubbleDemo: View {
+    @State private var selectedPlayerID: String?
+
     var body: some View {
         ScrollView {
             VStack {
-                ChatBubble(direction: .left) {
+                ChatBubble(direction: .left, playerID: "1") { id in
+                    if selectedPlayerID == id {
+                        selectedPlayerID = nil
+                    } else {
+                        selectedPlayerID = id
+                    }
+                } content: {
                     Text("Hello!")
                         .padding(.all, 20)
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .background(selectedPlayerID == "1" ? Color.green : Color.blue)
                 }
-                ChatBubble(direction: .right) {
+
+                ChatBubble(direction: .right, playerID: "2") { id in
+                    if selectedPlayerID == id {
+                        selectedPlayerID = nil
+                    } else {
+                        selectedPlayerID = id
+                    }
+                } content: {
                     Text("What's up!")
                         .padding(.all, 20)
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .background(selectedPlayerID == "2" ? Color.green : Color.blue)
                 }
             }
         }
     }
 }
+
 
 #if DEBUG
 struct ChatBubbleDemo_Previews: PreviewProvider {

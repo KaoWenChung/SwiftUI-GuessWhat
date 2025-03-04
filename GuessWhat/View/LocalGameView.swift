@@ -24,10 +24,13 @@ struct LocalGameView: View {
                 UserInputView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .randomResult:
-                ResultView(isOrdered: false, viewModel: viewModel)
+                ResultView(viewModel: viewModel)
+                    .transition(.slideAndFade(insertion: .bottom, removal: .top))
+            case .vote:
+                VoteView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .orderResult:
-                ResultView(isOrdered: true, viewModel: viewModel)
+                ResultView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .top, removal: .bottom))
                 
             }

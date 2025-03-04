@@ -48,6 +48,13 @@ struct GameSettingView: View {
                 }
                 .border(Color.gray, width: 1)
 
+                Button(CommonString.playerSetting.text) {
+                    viewModel.generatePlayers()
+                    viewModel.state = .typing
+                }
+                .frame(maxWidth: .infinity)
+                .applyButtonStyle()
+
                 Button(CommonString.start.text) {
                     viewModel.generatePlayers()
                     viewModel.state = .typing

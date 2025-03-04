@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21374BAF2BB8893700426540 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21374BAE2BB8893700426540 /* HomeView.swift */; };
 		21374BB12BB8986700426540 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21374BB02BB8986700426540 /* UIColor+.swift */; };
+		215C941C2D779B70003FE00D /* VoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215C941B2D779B70003FE00D /* VoteView.swift */; };
 		215ECA4F2B9FAD5000DFDCC2 /* GuessWhatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215ECA4E2B9FAD5000DFDCC2 /* GuessWhatApp.swift */; };
 		215ECA532B9FAD5500DFDCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 215ECA522B9FAD5500DFDCC2 /* Assets.xcassets */; };
 		215ECA572B9FAD5500DFDCC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 215ECA562B9FAD5500DFDCC2 /* Preview Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		21374BAE2BB8893700426540 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		21374BB02BB8986700426540 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		215C941B2D779B70003FE00D /* VoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteView.swift; sourceTree = "<group>"; };
 		215ECA4B2B9FAD5000DFDCC2 /* GuessWhat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessWhat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		215ECA4E2B9FAD5000DFDCC2 /* GuessWhatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWhatApp.swift; sourceTree = "<group>"; };
 		215ECA522B9FAD5500DFDCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				2176F0412BBF504F00B3986F /* GameView.swift */,
 				21B919712BA655A500E45CF0 /* GuideView.swift */,
 				215ECA902B9FAE7B00DFDCC2 /* GameSettingView.swift */,
+				215C941B2D779B70003FE00D /* VoteView.swift */,
 				215ECA922B9FAE8C00DFDCC2 /* UserInputView.swift */,
 				215ECA942B9FAE9900DFDCC2 /* ResultView.swift */,
 			);
@@ -380,6 +383,7 @@
 				215ECA4F2B9FAD5000DFDCC2 /* GuessWhatApp.swift in Sources */,
 				215ECAAC2BA3C46F00DFDCC2 /* Common.swift in Sources */,
 				215ECA7D2B9FAD9500DFDCC2 /* Player.swift in Sources */,
+				215C941C2D779B70003FE00D /* VoteView.swift in Sources */,
 				21374BB12BB8986700426540 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,7 +544,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessWhat/Preview Content\"";
-				DEVELOPMENT_TEAM = V66T46872F;
+				DEVELOPMENT_TEAM = 7QN4P34VRJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -578,7 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessWhat/Preview Content\"";
-				DEVELOPMENT_TEAM = V66T46872F;
+				DEVELOPMENT_TEAM = 7QN4P34VRJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -12,15 +12,15 @@ enum LocalGameState {
     case setting
     case typing
     case randomResult
+    case vote
     case orderResult
-    
 }
 
 final class QuickGameSessionViewModel: ObservableObject {
     @Published var state: LocalGameState = .setting
     @Published var players = [Player]()
     @Published var shuffledPlayers = [Player]()
-    var selectedNumber: Int = 2
+    @Published var selectedNumber: Int = 3
     let numberRange = 3...15
     var appVersion: String? {
         guard let dictionary = Bundle.main.infoDictionary,
@@ -43,6 +43,10 @@ extension QuickGameSessionViewModel {
 
     func shufflePlayers() {
         shuffledPlayers = players.shuffled()
+    }
+
+    func vote(id: String) {
+        players.first(where: { $0.id == id})?.beVoted()
     }
 }
 

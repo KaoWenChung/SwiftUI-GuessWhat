@@ -11,6 +11,7 @@ enum CommonString: LocalizedStringType {
     case next
     case start
     case player
+    case playerSetting
     case answer
     case restart
 }
