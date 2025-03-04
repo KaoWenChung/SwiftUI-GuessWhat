@@ -14,10 +14,6 @@ struct ResultView: View {
         self.viewModel = viewModel
     }
 
-    private var displayPlayers: [Player] {
-        viewModel.shuffledPlayers
-    }
-
     var body: some View {
         VStack {
             userContent
@@ -28,7 +24,7 @@ struct ResultView: View {
     private var userContent: some View {
         ScrollView {
             VStack(spacing: 0) {
-                ForEach(displayPlayers, id: \.id) { player in
+                ForEach(viewModel.players, id: \.id) { player in
                     playerRow(for: player)
                 }
             }
@@ -39,9 +35,9 @@ struct ResultView: View {
         HStack(alignment: .bottom,
                spacing: 0,
                content: {
-            Text("😎")
+            Text(player.id)
             ChatBubble(direction: .left) {
-                Text(player.content)
+                Text(subContent(player))
                     .padding(.all, 20)
                     .foregroundColor(Color.white)
                     .background(Color.blue)
@@ -49,25 +45,28 @@ struct ResultView: View {
         })
     }
 
+    private func subContent(_ player: Player) -> String {
+        "\(player.content) \nnumber: \(player.numberOfSelected), \nvoteTo: \(player.selectPlayerID)"
+    }
     private var actionButtons: some View {
         HStack {
-            Button("Vote", action: handleActionButtonHandler)
+            Button(CommonString.restart.text, action: handleActionButtonHandler)
             .applyButtonStyle()
             Spacer()
         }
     }
 
     private func handleActionButtonHandler() {
-        viewModel.state = .vote
+        viewModel.reset()
     }
 }
 
 #if DEBUG
-struct ResultView_Previews: PreviewProvider {
-    static var previews: some View {
-        ResultView(viewModel: QuickGameSessionViewModel())
-    }
-}
+//struct ResultView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ResultView(viewModel: QuickGameSessionViewModel())
+//    }
+//}
 #endif
 
 /*

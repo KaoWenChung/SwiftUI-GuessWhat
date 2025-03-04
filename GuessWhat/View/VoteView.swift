@@ -21,6 +21,7 @@ struct VoteView: View {
 
     var body: some View {
         VStack {
+            Text(viewModel.currentPlayerID)
             userContent
             actionButtons
         }
@@ -63,11 +64,6 @@ struct VoteView: View {
         guard let selectedPlayerID else { return }
         
         viewModel.vote(id: selectedPlayerID)
-        viewModel.currentPlayerIndex += 1
         self.selectedPlayerID = nil
-        
-        if viewModel.didAllPlayerVoted {
-            viewModel.state = .voteResult
-        }
     }
 }

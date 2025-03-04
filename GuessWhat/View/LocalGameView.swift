@@ -23,9 +23,9 @@ struct LocalGameView: View {
             case .typing:
                 UserInputView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
-            case .randomResult:
-                ResultView(viewModel: viewModel)
-                    .transition(.slideAndFade(insertion: .bottom, removal: .top))
+//            case .randomResult:
+//                ResultView(viewModel: viewModel)
+//                    .transition(.slideAndFade(insertion: .bottom, removal: .top))
             case .vote:
                 VoteView(viewModel: viewModel)
                     .transition(.slideAndFade(insertion: .bottom, removal: .top))
@@ -41,9 +41,9 @@ struct LocalGameView: View {
 }
 
 #if DEBUG
-struct LocalGameView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocalGameView()
-    }
-}
+//struct LocalGameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LocalGameView()
+//    }
+//}
 #endif

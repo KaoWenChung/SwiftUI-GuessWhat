@@ -66,7 +66,7 @@ struct UserInputView: View {
         textContent.removeAll()
         if isLastUser {
             // change the view to next page
-            viewModel.state = .randomResult
+            viewModel.state = .vote
             viewModel.shufflePlayers()
         } else {
             // move to next user
